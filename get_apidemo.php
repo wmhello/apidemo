@@ -10,10 +10,10 @@
   // if (empty($json['token']) || $json['token'] !== $token) {
   //   exit('error request');
   // }
-  $token = 'push';
-  if (isset($_SERVER['X-GitHub']) || isset($_SERVER['X-GitHub']) !== $token) {
-    exit('error request');
-  }
+  // $token = 'push';
+  // if (isset($_SERVER['X-GitHub']) || isset($_SERVER['X-GitHub']) !== $token) {
+  //   exit('error request');
+  // }
 
 
   $pwd = getcwd();
