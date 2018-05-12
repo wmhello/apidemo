@@ -40,5 +40,5 @@ if ($signature) {
     exit();
   }
 }
-http_response_code(404);
+//http_response_code(404);
 ?>
