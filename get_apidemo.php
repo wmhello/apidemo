@@ -32,7 +32,7 @@ $secret = "";
 // e.g. "/var/www/respostory"
 $path = "";
 // Headers deliveried from GitHub
-$signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
+$signature = $_SERVER['X_Hub_Signature'];
 if ($signature) {
   $hash = "sha1=".hash_hmac('sha1', file_get_contents("php://input"), $secret);
   if (strcmp($signature, $hash) == 0) {
