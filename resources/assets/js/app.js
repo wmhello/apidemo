@@ -1,6 +1,6 @@
 // //import bootstrap from 'bootstrap'
 require('./bootstrap');
-import * as uiv from 'uiv'
+// import * as uiv from 'uiv'
 import router from './routes'
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -9,7 +9,7 @@ import VueAxios from 'vue-axios';
 import App from './App.vue';
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
-Vue.use(uiv);
+// Vue.use(uiv);
 axios.defaults.baseURL = location.protocol + '//' + location.hostname + location.port + '/api';
 Vue.router = router
 Vue.use(require('@websanova/vue-auth'), {
@@ -18,4 +18,5 @@ Vue.use(require('@websanova/vue-auth'), {
     router: require('@websanova/vue-auth/drivers/router/vue-router.2.x.js'),
 });
 App.router = Vue.router
+//App.http.defaults.baseUrl = location.protocol + '//' + location.hostname + location.port + '/api';
 new Vue(App).$mount('#app');

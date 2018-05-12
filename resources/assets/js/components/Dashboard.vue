@@ -2,8 +2,8 @@
     <div>
 
         <h1>Laravel 5 – 酷炫的后台</h1>
-        <btn @click="getUserInfo">请求用户信息</btn>
-        <btn @click="getUserId">获取用户的id</btn>
+        <button class="btn btn-default" @click="getUserInfo">请求用户信息</button>
+        <button class="btn btn-default" @click="getUserId">获取用户的id</button>
     </div>
 
 </template>
