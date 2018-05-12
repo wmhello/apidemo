@@ -27,12 +27,12 @@
 
   // GitHub Webhook Secret.
 // Keep it the same with the 'Secret' field on your Webhooks / Manage webhook page of your respostory.
-$secret = "";
+$secret = "wmhello";
 // Path to your respostory on your server.
 // e.g. "/var/www/respostory"
-$path = "";
+$path = "d:/www/apidemo";
 // Headers deliveried from GitHub
-$signature = $_SERVER['X_Hub_Signature'];
+$signature = $_SERVER['X-Hub-Signature'];
 if ($signature) {
   $hash = "sha1=".hash_hmac('sha1', file_get_contents("php://input"), $secret);
   if (strcmp($signature, $hash) == 0) {
@@ -40,5 +40,5 @@ if ($signature) {
     exit();
   }
 }
-// http_response_code(404);
+http_response_code(404);
 ?>
