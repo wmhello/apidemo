@@ -6,10 +6,15 @@
   $json =  json_decode(file_get_contents('php://input'), true);
 
   //这里是一个认证的token，下面我们就会设置到
-  $token = 'wmhello';
-  if (empty($json['token']) || $json['token'] !== $token) {
+  // $token = 'wmhello';
+  // if (empty($json['token']) || $json['token'] !== $token) {
+  //   exit('error request');
+  // }
+  $token = 'push';
+  if (isset($_SERVER['X-GitHub']) || isset($_SERVER['X-GitHub']) !== $token) {
     exit('error request');
   }
+
 
   $pwd = getcwd();
 
