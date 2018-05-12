@@ -10,7 +10,7 @@ import App from './App.vue';
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 Vue.use(uiv);
-axios.defaults.baseURL = 'http://apidemo.test/api';
+axios.defaults.baseURL = location.protocol + '//' + location.hostname + location.port + '/api';
 Vue.router = router
 Vue.use(require('@websanova/vue-auth'), {
     auth: require('@websanova/vue-auth/drivers/auth/bearer.js'),
